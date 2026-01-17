@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "@acme/ui-core": "workspace:*",
-    "@acme/ui-vega": "workspace:*",
-    "@acme/ui-nova": "workspace:*",
-    "@acme/ui-maia": "workspace:*",
     "@acme/ui-lyra": "workspace:*",
+    "@acme/ui-maia": "workspace:*",
     "@acme/ui-mira": "workspace:*",
+    "@acme/ui-nova": "workspace:*",
+    "@acme/ui-vega": "workspace:*",
+    "lucide-react": "^0.562.0",
+    "motion": "^12.26.2",
     "react": "^18.3.0",
     "react-dom": "^18.3.0"
   },
