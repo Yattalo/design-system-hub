@@ -122,7 +122,7 @@ Update `registry/index.json`:
 Add example to `apps/showcase/`:
 
 ```typescript
-import { DashboardLayout } from "@acme/ui-core";
+import { DashboardLayout } from "@crazyone/ui-core";
 
 export default function Demo() {
   return (

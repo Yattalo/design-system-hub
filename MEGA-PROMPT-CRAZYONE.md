@@ -10,7 +10,7 @@ Sei il lead architect del design system **@crazyone**, un monorepo React complet
 
 Il progetto esiste già su GitHub: https://github.com/Yattalo/design-system-hub
 
-**Primo passo**: Clona il repo e rinomina tutto da `@acme` a `@crazyone`.
+**Primo passo**: Clona il repo e rinomina tutto da `@crazyone` a `@crazyone`.
 
 ## Architettura Monorepo
 
@@ -377,7 +377,7 @@ bun run changeset     # Create version changeset
 ## INIZIA ORA
 
 1. Clona: `git clone https://github.com/Yattalo/design-system-hub`
-2. Rinomina `@acme` → `@crazyone` in tutti i file
+2. Rinomina `@crazyone` → `@crazyone` in tutti i file
 3. Crea la struttura per i 20 temi
 4. Inizia con i componenti **Input**, **Select**, **Checkbox**, **Switch**, **Slider**
 5. Applica tutti i 20 temi

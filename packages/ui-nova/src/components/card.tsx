@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cn } from "@acme/ui-core";
+import { cn } from "@crazyone/ui-core";
 
 // Nova Card: Soft, rounded, warm feeling
 const Card = React.forwardRef<

@@ -11,12 +11,12 @@
   },
   "aliases": {
     "components": "@/components",
-    "utils": "@acme/ui-core/utils",
+    "utils": "@crazyone/ui-core/utils",
     "ui": "@/components/ui",
     "lib": "@/lib",
-    "hooks": "@acme/ui-core/hooks"
+    "hooks": "@crazyone/ui-core/hooks"
   },
   "registries": {
-    "@acme": "file://./registry/{name}.json"
+    "@crazyone": "file://./registry/{name}.json"
   }
 }

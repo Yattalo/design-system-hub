@@ -31,7 +31,7 @@ Version and publish UI packages to npm registry using changesets.
 ```
 /publish-ui
 /publish-ui --bump minor
-/publish-ui --packages @acme/ui-vega,@acme/ui-nova
+/publish-ui --packages @crazyone/ui-vega,@crazyone/ui-nova
 ```
 
 ## Pre-flight Checklist
@@ -64,8 +64,8 @@ A new file will be created in `.changeset/`:
 
 ```markdown
 ---
-"@acme/ui-vega": patch
-"@acme/ui-core": minor
+"@crazyone/ui-vega": patch
+"@crazyone/ui-core": minor
 ---
 
 Added new Button variants and fixed accessibility issues

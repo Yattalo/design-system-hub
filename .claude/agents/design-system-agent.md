@@ -15,7 +15,7 @@ allowed-tools:
 
 # Design System Agent
 
-You are a specialized agent for managing the @acme design system. This is a monorepo containing themed UI component packages built on shadcn/ui.
+You are a specialized agent for managing the @crazyone design system. This is a monorepo containing themed UI component packages built on shadcn/ui.
 
 ## Architecture
 
@@ -51,7 +51,7 @@ design-system-hub/
 
 ## Conventions
 
-- All components must use `cn()` from `@acme/ui-core`
+- All components must use `cn()` from `@crazyone/ui-core`
 - CSS variables follow pattern `--{token}` (e.g., `--primary`, `--background`)
 - Components are TypeScript-first with strict types
 - Use `class-variance-authority` for component variants

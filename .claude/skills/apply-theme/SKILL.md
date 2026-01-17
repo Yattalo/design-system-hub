@@ -69,7 +69,7 @@ Switch or apply a theme variant to a target project.
 
 ```bash
 cd {target}
-bun add @acme/ui-{theme}
+bun add @crazyone/ui-{theme}
 ```
 
 ### Step 2: Configure Tailwind
@@ -80,7 +80,7 @@ Update target's `tailwind.config.ts`:
 export default {
   content: [
     './src/**/*.{ts,tsx}',
-    './node_modules/@acme/ui-{theme}/dist/**/*.js'
+    './node_modules/@crazyone/ui-{theme}/dist/**/*.js'
   ],
   // Theme extends from CSS variables set in styles
 }
@@ -91,7 +91,7 @@ export default {
 Add to main CSS file (e.g., `globals.css`):
 
 ```css
-@import '@acme/ui-{theme}/styles.css';
+@import '@crazyone/ui-{theme}/styles.css';
 ```
 
 ### Step 4: Update Component Imports
@@ -103,7 +103,7 @@ Replace existing shadcn imports with themed variants:
 import { Button } from "@/components/ui/button"
 
 // After
-import { Button } from "@acme/ui-{theme}"
+import { Button } from "@crazyone/ui-{theme}"
 ```
 
 ## Verification

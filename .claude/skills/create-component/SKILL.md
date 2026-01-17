@@ -55,7 +55,7 @@ Read the generated component and understand its:
 For each target theme:
 
 1. Copy component to `packages/ui-{theme}/src/components/{name}.tsx`
-2. Update imports to use `@acme/ui-core` for utilities
+2. Update imports to use `@crazyone/ui-core` for utilities
 3. Apply theme-specific variant styling if needed
 4. Update `packages/ui-{theme}/src/index.ts` to export the component
 

@@ -3,7 +3,7 @@
  *
  * Enforces:
  * - Component files use kebab-case (e.g., button.tsx, data-table.tsx)
- * - Package names follow @acme/ui-{theme} pattern
+ * - Package names follow @crazyone/ui-{theme} pattern
  * - CSS variables follow --{token} convention
  */
 

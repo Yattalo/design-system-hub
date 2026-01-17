@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cn } from "@acme/ui-core";
+import { cn } from "@crazyone/ui-core";
 
 // Vega Card: Modern, sharp edges, strong shadows
 const Card = React.forwardRef<

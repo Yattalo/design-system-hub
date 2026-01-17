@@ -10,4 +10,4 @@ export {
 } from "./components/card";
 
 // Re-export utilities from core
-export { cn } from "@acme/ui-core";
+export { cn } from "@crazyone/ui-core";

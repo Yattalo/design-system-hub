@@ -3,7 +3,7 @@
  *
  * Generates shadcn-compatible registry JSON files from the theme packages.
  * This script reads component source files and outputs registry-item.json
- * files that can be consumed by `bunx shadcn@latest add @acme/<component>`.
+ * files that can be consumed by `bunx shadcn@latest add @crazyone/<component>`.
  *
  * Usage: bun run scripts/build-registry.ts
  */
@@ -78,7 +78,7 @@ async function buildComponentRegistry(
   }
 
   // Always include core dependency
-  dependencies.push("@acme/ui-core");
+  dependencies.push("@crazyone/ui-core");
 
   return {
     $schema: "https://ui.shadcn.com/schema/registry-item.json",
@@ -128,7 +128,7 @@ async function updateMainIndex(): Promise<void> {
     ? JSON.parse(await readFile(indexPath, "utf-8"))
     : {
         $schema: "https://ui.shadcn.com/schema/registry.json",
-        name: "@acme",
+        name: "@crazyone",
         homepage: "https://design.acme.dev",
         items: [],
         themes: [],

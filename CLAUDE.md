@@ -1,6 +1,6 @@
 # Design System Hub
 
-Centralized monorepo for @acme themed UI components built on shadcn/ui.
+Centralized monorepo for @crazyone themed UI components built on shadcn/ui.
 
 ## Quick Start
 
@@ -53,7 +53,7 @@ scripts/         # Build scripts
 
 ## Component Conventions
 
-- All components use `cn()` from `@acme/ui-core`
+- All components use `cn()` from `@crazyone/ui-core`
 - Use `class-variance-authority` for variants
 - Export both component and variants type
 - CSS variables follow `--{token}` pattern

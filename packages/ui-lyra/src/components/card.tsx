@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cn } from "@acme/ui-core";
+import { cn } from "@crazyone/ui-core";
 
 // Lyra Card: Vibrant, colorful shadows, gradient accents
 const Card = React.forwardRef<
