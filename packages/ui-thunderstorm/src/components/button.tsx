@@ -4,16 +4,16 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@crazyone/ui-core";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 font-bold uppercase tracking-wider bg-primary text-primary-foreground shadow-[4px_4px_0_hsl(var(--foreground)/0.3)] hover:shadow-[6px_6px_0_hsl(var(--foreground)/0.4)] hover:-translate-x-0.5 hover:-translate-y-0.5",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-bold uppercase tracking-[0.15em] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 rounded-sm bg-[hsl(55,95%,60%)] text-[hsl(240,30%,10%)] border-0 shadow-[0_0_20px_hsl(55,95%,60%,0.4),0_4px_15px_rgba(0,0,0,0.3)] hover:shadow-[0_0_35px_hsl(55,95%,60%,0.6),0_6px_25px_rgba(0,0,0,0.4)] hover:animate-[thunderstorm-crackle_0.5s_ease-in-out] active:bg-white active:animate-[thunderstorm-rumble_0.3s_ease-in-out] active:shadow-[0_0_50px_white,0_0_100px_hsl(55,95%,60%,0.8)]",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground",
-        destructive: "bg-destructive text-destructive-foreground",
-        outline: "border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground",
-        secondary: "bg-secondary text-secondary-foreground",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+        default: "",
+        destructive: "!bg-destructive !text-destructive-foreground",
+        outline: "!bg-transparent !border-2",
+        secondary: "!bg-secondary !text-secondary-foreground",
+        ghost: "!bg-transparent !shadow-none !border-0 hover:!bg-accent/20",
+        link: "!bg-transparent !shadow-none !border-0 underline-offset-4 hover:underline",
       },
       size: {
         default: "h-10 px-5 py-2",

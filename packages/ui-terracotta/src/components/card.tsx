@@ -8,7 +8,7 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "text-card-foreground shadow-sm transition-all duration-200 rounded-xl border border-border/50 bg-gradient-to-b from-card to-background shadow-lg shadow-primary/5",
+      "relative text-card-foreground transition-all duration-200 rounded-lg bg-gradient-to-b from-[hsl(15,60%,55%)] to-[hsl(15,55%,48%)] border-2 border-[hsl(15,50%,40%)] shadow-[0_6px_0_hsl(15,50%,35%),0_8px_20px_rgba(0,0,0,0.25)] overflow-hidden before:absolute before:inset-0 before:bg-[url('data:image/svg+xml,%3Csvg%20viewBox=%220%200%20100%20100%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter%20id=%22noise%22%3E%3CfeTurbulence%20type=%22fractalNoise%22%20baseFrequency=%220.8%22%20numOctaves=%224%22/%3E%3CfeColorMatrix%20type=%22saturate%22%20values=%220%22/%3E%3C/filter%3E%3Crect%20width=%22100%25%22%20height=%22100%25%22%20filter=%22url(%23noise)%22/%3E%3C/svg%3E')] before:opacity-[0.08] before:bg-blend-overlay before:bg-[length:100px] before:pointer-events-none hover:shadow-[0_8px_0_hsl(15,50%,35%),0_12px_30px_rgba(0,0,0,0.3)] hover:-translate-y-0.5",
       className
     )}
     {...props}

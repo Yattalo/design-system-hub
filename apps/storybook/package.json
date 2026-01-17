@@ -14,7 +14,22 @@
     "@crazyone/ui-vaporwave": "workspace:*",
     "@crazyone/ui-cyberdeck": "workspace:*",
     "@crazyone/ui-hologram": "workspace:*",
-    "@crazyone/ui-bubblegum": "workspace:*"
+    "@crazyone/ui-bubblegum": "workspace:*",
+    "@crazyone/ui-obsidian": "workspace:*",
+    "@crazyone/ui-campfire": "workspace:*",
+    "@crazyone/ui-bauhaus": "workspace:*",
+    "@crazyone/ui-arctic": "workspace:*",
+    "@crazyone/ui-terracotta": "workspace:*",
+    "@crazyone/ui-gelato": "workspace:*",
+    "@crazyone/ui-synthwave": "workspace:*",
+    "@crazyone/ui-darkroom": "workspace:*",
+    "@crazyone/ui-thunderstorm": "workspace:*",
+    "@crazyone/ui-retrofuture": "workspace:*",
+    "@crazyone/ui-greenhouse": "workspace:*",
+    "@crazyone/ui-wireframe": "workspace:*",
+    "@crazyone/ui-nightclub": "workspace:*",
+    "@crazyone/ui-bioluminescent": "workspace:*",
+    "@crazyone/ui-blackletter": "workspace:*"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^8.5.0",

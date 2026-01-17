@@ -41,3 +41,4 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 test-imports.tsx
 verify-imports.js
 @/
+apps/storybook/storybook-static/

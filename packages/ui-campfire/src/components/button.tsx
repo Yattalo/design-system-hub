@@ -4,16 +4,16 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@crazyone/ui-core";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 rounded-lg bg-primary text-primary-foreground shadow-md shadow-primary/30 hover:shadow-lg hover:shadow-primary/40 hover:bg-primary/90",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 rounded-lg bg-gradient-to-t from-[hsl(20,90%,45%)] via-[hsl(25,95%,52%)] to-[hsl(35,90%,60%)] text-white border-0 shadow-[0_0_15px_hsl(20,90%,52%,0.4),0_4px_12px_rgba(0,0,0,0.3)] animate-[campfire-flicker_3s_ease-in-out_infinite] hover:shadow-[0_0_25px_hsl(25,95%,55%,0.5),0_6px_20px_rgba(0,0,0,0.4)] hover:brightness-110 active:scale-[0.98] active:shadow-[0_0_10px_hsl(20,90%,52%,0.3),0_2px_8px_rgba(0,0,0,0.2)]",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground",
-        destructive: "bg-destructive text-destructive-foreground",
-        outline: "border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground",
-        secondary: "bg-secondary text-secondary-foreground",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+        default: "",
+        destructive: "!bg-destructive !text-destructive-foreground",
+        outline: "!bg-transparent !border-2",
+        secondary: "!bg-secondary !text-secondary-foreground",
+        ghost: "!bg-transparent !shadow-none !border-0 hover:!bg-accent/20",
+        link: "!bg-transparent !shadow-none !border-0 underline-offset-4 hover:underline",
       },
       size: {
         default: "h-10 px-5 py-2",

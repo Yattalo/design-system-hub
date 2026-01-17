@@ -4,16 +4,16 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@crazyone/ui-core";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 rounded-md bg-gradient-to-b from-primary to-primary/80 text-primary-foreground shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 rounded-lg bg-gradient-to-br from-[hsl(195,95%,60%)] via-[hsl(210,90%,70%)] to-[hsl(280,90%,55%)] bg-[length:200%_200%] text-white border border-white/30 shadow-[0_0_20px_rgba(100,200,255,0.3),0_4px_15px_rgba(0,0,0,0.2)] hover:animate-[arctic-aurora_4s_ease_infinite] hover:shadow-[0_0_30px_rgba(100,200,255,0.5),0_0_60px_rgba(139,92,246,0.3)] active:scale-[0.98] active:shadow-[inset_0_0_20px_rgba(255,255,255,0.1)]",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground",
-        destructive: "bg-destructive text-destructive-foreground",
-        outline: "border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground",
-        secondary: "bg-secondary text-secondary-foreground",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+        default: "",
+        destructive: "!bg-destructive !text-destructive-foreground",
+        outline: "!bg-transparent !border-2",
+        secondary: "!bg-secondary !text-secondary-foreground",
+        ghost: "!bg-transparent !shadow-none !border-0 hover:!bg-accent/20",
+        link: "!bg-transparent !shadow-none !border-0 underline-offset-4 hover:underline",
       },
       size: {
         default: "h-10 px-5 py-2",

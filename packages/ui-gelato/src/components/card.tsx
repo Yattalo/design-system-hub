@@ -8,7 +8,7 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "text-card-foreground shadow-sm transition-all duration-200 rounded-2xl border-2 border-transparent bg-gradient-to-br from-primary/5 via-background to-secondary/5 shadow-lg",
+      "relative text-card-foreground transition-all duration-300 rounded-[1.5rem] bg-gradient-to-br from-[hsl(0,45%,95%)] via-[hsl(40,60%,97%)] to-[hsl(150,45%,95%)] border-0 shadow-[0_8px_30px_hsl(0,45%,72%,0.15),0_4px_15px_hsl(40,60%,85%,0.2)] overflow-hidden before:absolute before:top-3 before:left-4 before:w-8 before:h-8 before:rounded-full before:bg-gradient-to-br before:from-white/60 before:to-transparent before:pointer-events-none hover:shadow-[0_12px_40px_hsl(0,45%,72%,0.25),0_6px_20px_hsl(40,60%,85%,0.3)] hover:animate-[gelato-melt_8s_ease-in-out_infinite]",
       className
     )}
     {...props}

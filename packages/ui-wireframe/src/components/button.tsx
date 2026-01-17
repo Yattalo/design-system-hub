@@ -4,16 +4,16 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@crazyone/ui-core";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border-2 border-dashed border-foreground bg-transparent relative hover:border-solid hover:bg-foreground hover:text-background",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 relative border-2 border-dashed border-foreground bg-transparent rounded-none font-mono animate-[wireframe-wobble_4s_ease-in-out_infinite] shadow-[2px_2px_0_-1px_hsl(var(--background)),3px_3px_0_-1px_currentColor] before:absolute before:-top-4 before:left-0 before:text-[0.6em] before:text-muted-foreground before:content-['BTN'] hover:border-solid hover:bg-foreground hover:text-background hover:shadow-[3px_3px_0_-1px_hsl(var(--background)),4px_4px_0_-1px_currentColor] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[1px_1px_0_-1px_currentColor]",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground",
-        destructive: "bg-destructive text-destructive-foreground",
-        outline: "border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground",
-        secondary: "bg-secondary text-secondary-foreground",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+        default: "",
+        destructive: "!bg-destructive !text-destructive-foreground",
+        outline: "!bg-transparent !border-2",
+        secondary: "!bg-secondary !text-secondary-foreground",
+        ghost: "!bg-transparent !shadow-none !border-0 hover:!bg-accent/20",
+        link: "!bg-transparent !shadow-none !border-0 underline-offset-4 hover:underline",
       },
       size: {
         default: "h-10 px-5 py-2",

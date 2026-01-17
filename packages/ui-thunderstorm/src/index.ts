@@ -1,5 +1,5 @@
 // @crazyone/ui-thunderstorm
-// Thunderstorm Theme - Electric tension, dramatic release
+// Thunderstorm Theme - Electric storm
 
 export * from "./components/button";
 export * from "./components/card";
@@ -8,3 +8,8 @@ export * from "./components/checkbox";
 export * from "./components/switch";
 export * from "./components/slider";
 export * from "./components/select";
+export * from "./components/alert";
+export * from "./components/badge";
+export * from "./components/dialog";
+export * from "./components/tabs";
+export * from "./components/tooltip";
