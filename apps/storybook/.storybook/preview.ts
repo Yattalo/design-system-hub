@@ -42,6 +42,8 @@ const preview: Preview = {
         nightclub: "nightclub",
         bioluminescent: "bioluminescent",
         blackletter: "blackletter",
+        // Professional
+        vega: "vega",
       },
       defaultTheme: "brutalist",
       attributeName: "data-theme",

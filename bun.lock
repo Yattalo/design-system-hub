@@ -82,6 +82,7 @@
         "@crazyone/ui-terracotta": "workspace:*",
         "@crazyone/ui-thunderstorm": "workspace:*",
         "@crazyone/ui-vaporwave": "workspace:*",
+        "@crazyone/ui-vega": "workspace:*",
         "@crazyone/ui-wireframe": "workspace:*",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",

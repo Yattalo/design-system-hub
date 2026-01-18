@@ -29,7 +29,8 @@
     "@crazyone/ui-wireframe": "workspace:*",
     "@crazyone/ui-nightclub": "workspace:*",
     "@crazyone/ui-bioluminescent": "workspace:*",
-    "@crazyone/ui-blackletter": "workspace:*"
+    "@crazyone/ui-blackletter": "workspace:*",
+    "@crazyone/ui-vega": "workspace:*"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^8.5.0",
