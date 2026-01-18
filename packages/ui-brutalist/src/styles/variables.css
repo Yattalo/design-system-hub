@@ -1,30 +1,251 @@
-/* Brutalist Theme - Raw concrete, zero pretense */
-/* Exposed structure, harsh shadows, monospace typography */
+/* ============================================
+   BRUTALIST Design System - CSS Foundation
+   "Truth to Materials, Zero Pretense"
+   ============================================ */
+
+/* Font imports - Space Grotesk for display, JetBrains Mono for body */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root, [data-theme="brutalist"] {
-    --background: 0 0% 96%;
-    --foreground: 0 0% 10%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
-    --primary: 20 100% 50%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 85%;
+    /* ========== COLOR PALETTE ========== */
+
+    /* Core Background/Foreground */
+    --background: 30 10% 89%;           /* Raw Concrete #E8E4E0 */
+    --foreground: 0 0% 10%;             /* Void Black #1A1A1A */
+
+    /* Card surfaces */
+    --card: 0 0% 98%;                   /* Chalk White #FAFAFA */
+    --card-foreground: 0 0% 10%;        /* Void Black */
+
+    /* Primary action - Safety Yellow */
+    --primary: 50 100% 50%;             /* #FFD600 */
+    --primary-foreground: 0 0% 10%;     /* Black text on yellow */
+
+    /* Secondary - Cold Steel */
+    --secondary: 30 4% 71%;             /* #B8B4B0 */
     --secondary-foreground: 0 0% 10%;
-    --muted: 0 0% 92%;
-    --muted-foreground: 0 0% 40%;
-    --accent: 20 100% 50%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 10%;
-    --input: 0 0% 10%;
-    --ring: 20 100% 50%;
+
+    /* Muted elements */
+    --muted: 30 4% 71%;                 /* Cold Steel */
+    --muted-foreground: 0 0% 30%;       /* Dark gray */
+
+    /* Accent - Same as primary for brutalist consistency */
+    --accent: 50 100% 50%;              /* Safety Yellow */
+    --accent-foreground: 0 0% 10%;
+
+    /* Destructive - Stop Red */
+    --destructive: 0 100% 50%;          /* #FF0000 */
+    --destructive-foreground: 0 0% 98%; /* White on red */
+
+    /* Success - Exit Green */
+    --success: 120 100% 40%;            /* #00CC00 */
+    --success-foreground: 0 0% 10%;
+
+    /* Warning - Hazard Orange */
+    --warning: 24 100% 50%;             /* #FF6600 */
+    --warning-foreground: 0 0% 10%;
+
+    /* Info - Blueprint Blue */
+    --info: 220 100% 50%;               /* #0066FF */
+    --info-foreground: 0 0% 98%;
+
+    /* UI Elements */
+    --border: 0 0% 10%;                 /* Void Black */
+    --input: 0 0% 10%;                  /* Void Black */
+    --ring: 50 100% 50%;                /* Safety Yellow */
+
+    /* ========== BRUTALIST: NO RADIUS ========== */
     --radius: 0rem;
 
-    /* Theme-specific custom properties */
-    --font-family: 'JetBrains Mono', 'SF Mono', monospace;
+    /* ========== TYPOGRAPHY ========== */
+    --font-display: "Space Grotesk", system-ui, sans-serif;
+    --font-body: "JetBrains Mono", "SF Mono", Consolas, monospace;
+    --font-mono: "JetBrains Mono", "SF Mono", Consolas, monospace;
+
+    /* Type scale (Major Third 1.250) */
+    --text-xs: 0.6875rem;    /* 11px */
+    --text-sm: 0.8125rem;    /* 13px */
+    --text-base: 1rem;       /* 16px */
+    --text-lg: 1.25rem;      /* 20px */
+    --text-xl: 1.5625rem;    /* 25px */
+    --text-2xl: 1.9375rem;   /* 31px */
+    --text-3xl: 2.4375rem;   /* 39px */
+    --text-4xl: 3.0625rem;   /* 49px */
+    --text-5xl: 3.8125rem;   /* 61px */
+
+    /* ========== SHADOW SYSTEM (Zero Blur) ========== */
+    --shadow-brutal-xs: 1px 1px 0 0 hsl(var(--border));
+    --shadow-brutal-sm: 2px 2px 0 0 hsl(var(--border));
+    --shadow-brutal-md: 4px 4px 0 0 hsl(var(--border));
+    --shadow-brutal-lg: 6px 6px 0 0 hsl(var(--border));
+    --shadow-brutal-xl: 8px 8px 0 0 hsl(var(--border));
+    --shadow-brutal-2xl: 12px 12px 0 0 hsl(var(--border));
+
+    /* ========== TIMING FUNCTIONS ========== */
+    --ease-brutal: cubic-bezier(0.7, 0, 0.3, 1);
+    --ease-slam: cubic-bezier(0.2, 1.5, 0.5, 1);
+    --ease-step: steps(4, end);
+
+    /* ========== SPACING (8px base) ========== */
+    --space-1: 0.25rem;      /* 4px */
+    --space-2: 0.5rem;       /* 8px */
+    --space-3: 0.75rem;      /* 12px */
+    --space-4: 1rem;         /* 16px */
+    --space-6: 1.5rem;       /* 24px */
+    --space-8: 2rem;         /* 32px */
+    --space-12: 3rem;        /* 48px */
+    --space-16: 4rem;        /* 64px */
+  }
+
+  /* ========== DARK MODE ========== */
+  .dark, [data-theme="brutalist-dark"] {
+    --background: 0 0% 10%;             /* Void Black */
+    --foreground: 30 10% 89%;           /* Raw Concrete */
+    --card: 0 0% 16%;                   /* Deep Charcoal #2A2A2A */
+    --card-foreground: 30 10% 89%;
+    --muted: 0 0% 25%;
+    --muted-foreground: 0 0% 65%;
+    --border: 0 0% 98%;                 /* White borders in dark mode */
+
+    --shadow-brutal-xs: 1px 1px 0 0 hsl(var(--border));
+    --shadow-brutal-sm: 2px 2px 0 0 hsl(var(--border));
+    --shadow-brutal-md: 4px 4px 0 0 hsl(var(--border));
+    --shadow-brutal-lg: 6px 6px 0 0 hsl(var(--border));
+    --shadow-brutal-xl: 8px 8px 0 0 hsl(var(--border));
+    --shadow-brutal-2xl: 12px 12px 0 0 hsl(var(--border));
   }
 }
 
-/* Theme Signature: harsh-shadows grid-coords */
+/* ========== BASE STYLES ========== */
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-body);
+    letter-spacing: 0.02em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  code, pre, kbd {
+    font-family: var(--font-mono);
+  }
+}
+
+/* ========== UTILITY CLASSES ========== */
+@layer utilities {
+  /* Typography */
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+  .font-mono { font-family: var(--font-mono); }
+
+  /* Brutalist Headline */
+  .brutal-headline {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* Brutalist Label */
+  .brutal-label {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: var(--text-xs);
+  }
+
+  /* Shadow utilities */
+  .shadow-brutal-xs { box-shadow: var(--shadow-brutal-xs); }
+  .shadow-brutal-sm { box-shadow: var(--shadow-brutal-sm); }
+  .shadow-brutal-md { box-shadow: var(--shadow-brutal-md); }
+  .shadow-brutal-lg { box-shadow: var(--shadow-brutal-lg); }
+  .shadow-brutal-xl { box-shadow: var(--shadow-brutal-xl); }
+  .shadow-brutal-2xl { box-shadow: var(--shadow-brutal-2xl); }
+
+  /* Concrete texture overlay */
+  .brutal-texture {
+    position: relative;
+  }
+  .brutal-texture::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.04;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+  }
+
+  /* Blueprint grid overlay */
+  .brutal-grid {
+    position: relative;
+  }
+  .brutal-grid::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, hsl(var(--border) / 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
+  }
+
+  /* Elevated interactive element */
+  .brutal-elevated {
+    box-shadow: var(--shadow-brutal-md);
+    transition: box-shadow 0.1s var(--ease-brutal), transform 0.1s var(--ease-brutal);
+  }
+  .brutal-elevated:hover {
+    box-shadow: var(--shadow-brutal-lg);
+    transform: translate(-2px, -2px);
+  }
+  .brutal-elevated:active {
+    box-shadow: var(--shadow-brutal-xs);
+    transform: translate(2px, 2px);
+  }
+
+  /* Stripe pattern (construction zone) */
+  .brutal-stripes {
+    background: repeating-linear-gradient(
+      -45deg,
+      hsl(var(--warning)),
+      hsl(var(--warning)) 10px,
+      hsl(var(--foreground)) 10px,
+      hsl(var(--foreground)) 20px
+    );
+  }
+}
+
+/* ========== FOCUS STATES ========== */
+@layer base {
+  :focus-visible {
+    outline: 3px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
+
+/* ========== REDUCED MOTION ========== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Theme Signature: harsh-shadows grid-coords uppercase-mono */

@@ -1,33 +1,55 @@
-/* Brutalist Theme Animations */
-/* Raw concrete, zero pretense - aggressive, jarring, unapologetic */
+/* ============================================
+   BRUTALIST Design System - Animations
+   "Jarring, Mechanical, Unapologetic"
+   ============================================ */
 
-/* Shake effect on click/active */
-@keyframes brutalist-shake {
+/* ========== CORE KEYFRAMES ========== */
+
+/* Shake - Mechanical vibration on click/error */
+@keyframes brutal-shake {
   0%, 100% { transform: translate(0, 0); }
-  10% { transform: translate(-3px, 0); }
-  20% { transform: translate(3px, 0); }
-  30% { transform: translate(-2px, 0); }
-  40% { transform: translate(2px, 0); }
-  50% { transform: translate(-1px, 0); }
-  60% { transform: translate(1px, 0); }
-  70% { transform: translate(-1px, 0); }
-  80% { transform: translate(1px, 0); }
-  90% { transform: translate(0, 0); }
+  10% { transform: translate(-4px, 0); }
+  20% { transform: translate(4px, 0); }
+  30% { transform: translate(-4px, 0); }
+  40% { transform: translate(4px, 0); }
+  50% { transform: translate(-2px, 0); }
+  60% { transform: translate(2px, 0); }
+  70% { transform: translate(-2px, 0); }
+  80% { transform: translate(2px, 0); }
+  90% { transform: translate(-1px, 0); }
 }
 
-/* Glitch text effect */
-@keyframes brutalist-glitch {
+/* Slam - Heavy entry animation with industrial weight */
+@keyframes brutal-slam {
+  0% {
+    transform: translateY(-30px) scale(1.05);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(4px) scale(0.98);
+  }
+  70% {
+    transform: translateY(-2px) scale(1.01);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Glitch - Digital corruption for text */
+@keyframes brutal-glitch {
   0%, 100% {
     clip-path: inset(40% 0 61% 0);
     transform: translate(0);
   }
   20% {
     clip-path: inset(92% 0 1% 0);
-    transform: translate(-2px, 2px);
+    transform: translate(-4px, 2px);
   }
   40% {
     clip-path: inset(43% 0 1% 0);
-    transform: translate(2px, -2px);
+    transform: translate(4px, -2px);
   }
   60% {
     clip-path: inset(25% 0 58% 0);
@@ -39,96 +61,255 @@
   }
 }
 
-/* Hard shadow slam */
-@keyframes brutalist-slam {
-  0% {
-    box-shadow: 0 0 0 0 currentColor;
-    transform: translate(0, 0);
-  }
-  50% {
-    box-shadow: 4px 4px 0 0 currentColor;
-    transform: translate(-2px, -2px);
-  }
-  100% {
-    box-shadow: 6px 6px 0 0 currentColor;
-    transform: translate(-3px, -3px);
-  }
-}
-
-/* Grid coordinate flicker */
-@keyframes brutalist-flicker {
+/* Flicker - Unstable industrial lighting */
+@keyframes brutal-flicker {
   0%, 100% { opacity: 1; }
   92% { opacity: 1; }
-  93% { opacity: 0.3; }
+  93% { opacity: 0.2; }
   94% { opacity: 1; }
-  96% { opacity: 0.5; }
+  95% { opacity: 0.8; }
+  96% { opacity: 0.4; }
   97% { opacity: 1; }
+  98% { opacity: 0.9; }
 }
 
-/* Typewriter cursor blink */
-@keyframes brutalist-cursor {
-  0%, 50% { border-right-color: currentColor; }
-  51%, 100% { border-right-color: transparent; }
+/* Stamp - Press down like a rubber stamp */
+@keyframes brutal-stamp {
+  0% { transform: scale(1); }
+  40% { transform: scale(0.92); }
+  60% { transform: scale(0.96); }
+  100% { transform: scale(1); }
 }
 
-/* Utility classes */
-.brutalist-shake {
-  animation: brutalist-shake 0.4s ease-in-out;
+/* Cursor blink - Typewriter terminal cursor */
+@keyframes brutal-cursor {
+  0%, 49% { border-right-color: currentColor; }
+  50%, 100% { border-right-color: transparent; }
 }
 
-.brutalist-glitch {
+/* Pulse hard - No smooth easing, abrupt steps */
+@keyframes brutal-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Slide in from left - Industrial entrance */
+@keyframes brutal-slide-in {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Expand - Element expands with hard edges */
+@keyframes brutal-expand {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+/* Typing - Typewriter text reveal */
+@keyframes brutal-typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Shadow grow - For hover states */
+@keyframes brutal-shadow-grow {
+  0% {
+    box-shadow: 4px 4px 0 0 hsl(var(--border));
+    transform: translate(0, 0);
+  }
+  100% {
+    box-shadow: 8px 8px 0 0 hsl(var(--border));
+    transform: translate(-2px, -2px);
+  }
+}
+
+/* Scan line - CRT monitor effect */
+@keyframes brutal-scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+/* ========== UTILITY CLASSES ========== */
+
+.animate-brutal-shake {
+  animation: brutal-shake 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.animate-brutal-slam {
+  animation: brutal-slam 0.35s cubic-bezier(0.2, 1.5, 0.5, 1) forwards;
+}
+
+.animate-brutal-stamp {
+  animation: brutal-stamp 0.15s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.animate-brutal-flicker {
+  animation: brutal-flicker 3s infinite steps(1);
+}
+
+.animate-brutal-pulse {
+  animation: brutal-pulse 1s infinite steps(2);
+}
+
+.animate-brutal-slide-in {
+  animation: brutal-slide-in 0.4s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+}
+
+.animate-brutal-expand {
+  animation: brutal-expand 0.3s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+}
+
+/* ========== GLITCH TEXT EFFECT ========== */
+
+.brutal-glitch {
   position: relative;
 }
 
-.brutalist-glitch::before,
-.brutalist-glitch::after {
+.brutal-glitch::before,
+.brutal-glitch::after {
   content: attr(data-text);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  pointer-events: none;
 }
 
-.brutalist-glitch::before {
-  animation: brutalist-glitch 2s infinite;
+.brutal-glitch::before {
+  animation: brutal-glitch 2.5s infinite;
   color: hsl(var(--destructive));
   z-index: -1;
 }
 
-.brutalist-glitch::after {
-  animation: brutalist-glitch 2s infinite reverse;
+.brutal-glitch::after {
+  animation: brutal-glitch 2.5s infinite reverse;
+  animation-delay: 0.1s;
   color: hsl(var(--primary));
   z-index: -2;
 }
 
-.brutalist-slam:hover {
-  animation: brutalist-slam 0.3s ease-out forwards;
-}
+/* ========== CURSOR EFFECT ========== */
 
-.brutalist-flicker {
-  animation: brutalist-flicker 3s infinite;
-}
-
-.brutalist-cursor::after {
+.brutal-cursor::after {
   content: '|';
-  animation: brutalist-cursor 1s step-end infinite;
+  animation: brutal-cursor 1s step-end infinite;
   margin-left: 2px;
+  font-weight: 700;
 }
 
-/* Active state shake for buttons */
-.brutalist-button-active:active {
-  animation: brutalist-shake 0.3s ease-in-out;
+/* ========== INTERACTIVE STATES ========== */
+
+/* Button active shake */
+.brutal-button-active:active {
+  animation: brutal-shake 0.3s cubic-bezier(0.7, 0, 0.3, 1);
 }
 
-/* Grid coordinate label */
-.brutalist-coords::before {
+/* Shadow hover animation */
+.brutal-shadow-hover {
+  transition: box-shadow 0.1s cubic-bezier(0.7, 0, 0.3, 1),
+              transform 0.1s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.brutal-shadow-hover:hover {
+  box-shadow: 8px 8px 0 0 hsl(var(--border));
+  transform: translate(-2px, -2px);
+}
+
+.brutal-shadow-hover:active {
+  box-shadow: 2px 2px 0 0 hsl(var(--border));
+  transform: translate(2px, 2px);
+}
+
+/* ========== GRID COORDINATE LABEL ========== */
+
+.brutal-coords::before {
   content: '[' attr(data-row) '.' attr(data-col) ']';
   position: absolute;
   top: -1.5em;
   left: 0;
   font-size: 0.65em;
-  font-family: monospace;
+  font-family: var(--font-mono);
   opacity: 0.5;
   letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ========== SCANLINE OVERLAY ========== */
+
+.brutal-scanline::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    hsl(var(--foreground) / 0.1),
+    transparent
+  );
+  animation: brutal-scanline 8s linear infinite;
+  pointer-events: none;
+}
+
+/* ========== LOADING BAR ========== */
+
+.brutal-loading {
+  position: relative;
+  height: 4px;
+  background: hsl(var(--muted));
+  border: 2px solid hsl(var(--border));
+  overflow: hidden;
+}
+
+.brutal-loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 30%;
+  background: hsl(var(--primary));
+  animation: brutal-loading 1.5s steps(10) infinite;
+}
+
+@keyframes brutal-loading {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(400%); }
+}
+
+/* ========== REDUCED MOTION ========== */
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-brutal-shake,
+  .animate-brutal-slam,
+  .animate-brutal-stamp,
+  .animate-brutal-flicker,
+  .animate-brutal-pulse,
+  .animate-brutal-slide-in,
+  .animate-brutal-expand,
+  .brutal-glitch::before,
+  .brutal-glitch::after,
+  .brutal-cursor::after,
+  .brutal-scanline::after,
+  .brutal-loading::after {
+    animation: none !important;
+  }
 }
