@@ -46,7 +46,13 @@ packages/
 ├── ui-wireframe/      # Blueprint overlays, hand-drawn
 ├── ui-nightclub/      # Strobe effects, bass pulse, VIP
 ├── ui-bioluminescent/ # Deep sea glow, jellyfish pulses
-└── ui-blackletter/    # Gothic illuminated manuscripts
+├── ui-blackletter/    # Gothic illuminated manuscripts
+│
+├── ui-vega/           # Sharp modern, enterprise blue
+├── ui-nova/           # Soft rounded, warm orange
+├── ui-maia/           # Minimal monochrome, gray
+├── ui-lyra/           # Vibrant purple, marketing
+└── ui-mira/           # Corporate navy, business
 
 apps/
 ├── showcase/          # Demo app for visual testing
@@ -177,3 +183,4 @@ packages/ui-{theme}/
 | Typography | blackletter, wireframe | Font-focused, structural |
 | Nightlife | nightclub | Dark, high-energy, pulsing |
 | Geometric | bauhaus | Strict shapes, primary colors |
+| Professional | vega, nova, maia, lyra, mira | Business-focused, versatile |
